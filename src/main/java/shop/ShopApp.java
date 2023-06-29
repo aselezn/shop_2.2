@@ -10,7 +10,7 @@ public class ShopApp {
 
     public static final String databaseUrl = "jdbc:mysql://localhost:3306/shop_db";
     public static final String databaseUser = "root";
-    public static final String databasePassword = "rootpass";
+    public static final String databasePassword = "root";
 
     private JTextField databaseUrlField;
     private JTextField tableNameField;
