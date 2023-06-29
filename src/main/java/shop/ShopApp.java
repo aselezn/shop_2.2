@@ -8,6 +8,10 @@ import java.sql.*;
 
 public class ShopApp {
 
+    public static final String databaseUrl = "jdbc:mysql://localhost:3306/shop_db";
+    public static final String databaseUser = "root";
+    public static final String databasePassword = "rootpass";
+
     private JTextField databaseUrlField;
     private JTextField tableNameField;
     private JButton loadButton;
@@ -79,9 +83,6 @@ public class ShopApp {
 
     private void loadDataFromTable() {
 
-        String databaseUrl = databaseUrlField.getText();
-        String databaseUser = DataBaseProperties.get().getProperty("user");
-        String databasePassword = DataBaseProperties.get().getProperty("password");
         String tableName = tableNameField.getText();
 
         try (Connection connection = DriverManager.getConnection(databaseUrl, databaseUser, databasePassword);
